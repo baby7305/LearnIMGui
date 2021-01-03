@@ -30,6 +30,10 @@ add_executable(imgui_example_null
 add_executable(imgui_example_win32_directx9
         ${IMGUI_DIR}/examples/example_win32_directx9/main.cpp
         )
+add_executable(imgui_example_win32_directx10
+        ${IMGUI_DIR}/examples/example_win32_directx10/main.cpp
+        )
 
 target_link_libraries(imgui_example_null imgui)
 target_link_libraries(imgui_example_win32_directx9 imgui-win32 imgui-dx9)
+target_link_libraries(imgui_example_win32_directx10 imgui-win32 imgui-dx10)
