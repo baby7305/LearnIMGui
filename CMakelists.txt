@@ -21,6 +21,7 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 add_subdirectory(packages)
 
 include_directories(imgui PUBLIC "${IMGUI_DIR}")
+include_directories(glad46/include)
 
 add_executable(imgui_example_null
         ${IMGUI_DIR}/examples/example_null/main.cpp
