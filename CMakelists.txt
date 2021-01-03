@@ -27,5 +27,9 @@ include_directories(${IMGUI_DIR}/examples)
 add_executable(imgui_example_null
         ${IMGUI_DIR}/examples/example_null/main.cpp
         )
+add_executable(imgui_example_win32_directx9
+        ${IMGUI_DIR}/examples/example_win32_directx9/main.cpp
+        )
 
 target_link_libraries(imgui_example_null imgui)
+target_link_libraries(imgui_example_win32_directx9 imgui-win32 imgui-dx9)
