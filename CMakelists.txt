@@ -10,6 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(IMGUI_DIR ${PROJECT_SOURCE_DIR}/imgui-1.79)
+set(SDL2_DIR "C:\\opengl\\SDL2-2.0.14")
 
 add_library(imgui
         ${IMGUI_DIR}/imgui.cpp
@@ -22,6 +23,9 @@ add_subdirectory(packages)
 
 include_directories(imgui PUBLIC "${IMGUI_DIR}")
 include_directories(glad46/include)
+include_directories(${SDL2_DIR}/include)
+
+link_directories(${SDL2_DIR}/lib/x64/)
 
 add_executable(imgui_example_null
         ${IMGUI_DIR}/examples/example_null/main.cpp
