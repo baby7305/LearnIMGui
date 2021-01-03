@@ -32,5 +32,12 @@ link_directories(${SDL2_DIR}/lib/x64/)
 add_executable(imgui_example_null
         ${IMGUI_DIR}/examples/example_null/main.cpp
         )
+add_executable(imgui_example_sdl_opengl3
+        glad46/src/glad.c
+        ${IMGUI_DIR}/examples/example_sdl_opengl3/main.cpp
+        ${IMGUI_DIR}/examples/imgui_impl_sdl.cpp
+        ${IMGUI_DIR}/examples/imgui_impl_opengl3.cpp
+        )
 
 target_link_libraries(imgui_example_null imgui)
+target_link_libraries(imgui_example_sdl_opengl3 SDL2 SDL2main SDL2test imgui)
