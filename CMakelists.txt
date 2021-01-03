@@ -24,6 +24,8 @@ add_subdirectory(packages)
 include_directories(imgui PUBLIC "${IMGUI_DIR}")
 include_directories(glad46/include)
 include_directories(${SDL2_DIR}/include)
+include_directories(${IMGUI_DIR})
+include_directories(${IMGUI_DIR}/examples)
 
 link_directories(${SDL2_DIR}/lib/x64/)
 
